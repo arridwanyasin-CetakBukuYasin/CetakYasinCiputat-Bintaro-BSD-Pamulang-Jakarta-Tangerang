@@ -244,7 +244,8 @@ section {
     gap: 26px;
 }
 
-.catalog-card .img-wrap {
+.catalog-card .img-wrap,
+.portfolio-card .img-wrap {
     position: relative;
     aspect-ratio: 3 / 4;
     overflow: hidden;
@@ -252,7 +253,12 @@ section {
     cursor: pointer;
 }
 
-.catalog-card .img-wrap img {
+.portfolio-card .img-wrap {
+    aspect-ratio: 4 / 3;
+}
+
+.catalog-card .img-wrap img,
+.portfolio-card .img-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -260,7 +266,8 @@ section {
     transition: transform 0.35s ease;
 }
 
-.catalog-card:hover .img-wrap img {
+.catalog-card:hover .img-wrap img,
+.portfolio-card:hover .img-wrap img {
     transform: scale(1.04);
 }
 
@@ -311,6 +318,45 @@ section {
     color: #687587;
     line-height: 1.65;
     font-size: 14px;
+}
+
+/* CSS TAMBAHAN UNTUK PORTOFOLIO */
+.portfolio-section {
+    background: #fff;
+}
+
+.trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: var(--navy);
+    color: white;
+    padding: 28px 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid rgba(216, 182, 108, 0.35);
+}
+
+.trust-item h3 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    font-size: 13px;
+    color: #dce4ed;
+}
+
+.client-meta {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    font-size: 12px;
+    color: var(--gold-dark);
+    font-weight: bold;
 }
 
 .modal {
@@ -377,7 +423,8 @@ section {
 }
 
 .about {
-    background: #fff;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
 }
 
 .about-content {
@@ -406,7 +453,7 @@ section {
 }
 
 .feature {
-    background: var(--cream);
+    background: #fff;
     border: 1px solid #eee3ce;
     border-radius: 14px;
     padding: 25px;
@@ -505,7 +552,8 @@ footer span {
 
     .products,
     .catalog-grid,
-    .features {
+    .features,
+    .trust-bar {
         grid-template-columns: 1fr;
     }
 
@@ -526,6 +574,7 @@ footer span {
 <a href="#home">Beranda</a>
 <a href="#produk">Produk</a>
 <a href="#katalog">Katalog Cover</a>
+<a href="#portofolio">Portofolio</a>
 <a href="#tentang">Tentang Kami</a>
 <a href="#lokasi">Lokasi</a>
 </div>
@@ -715,6 +764,89 @@ Pesan Model Ini
 </div>
 </section>
 
+<!-- BAGIAN BARU: BUKTI KUALITAS & KEPERCAYAAN (PORTOFOLIO) -->
+<section class="portfolio-section" id="portofolio">
+<div class="container">
+
+<div class="heading">
+<h2>Hasil Cetak Buku Yasin yang Pernah Kami Kerjakan</h2>
+<p>Dokumentasi nyata hasil cetak, kerapian jilid, dan kualitas bahan cover dari berbagai pesanan pelanggan yang telah mempercayakan acaranya kepada Arridwan Yasin.</p>
+</div>
+
+<div class="trust-bar">
+<div class="trust-item">
+<h3>13+ Tahun</h3>
+<p>Pengalaman Percetakan Sejak 2013</p>
+</div>
+<div class="trust-item">
+<h3>100% Rapi</h3>
+<p>Kontrol Kualitas Jilid & Cetakan Tajam</p>
+</div>
+<div class="trust-item">
+<h3>Tepat Waktu</h3>
+<p>Pengiriman Aman ke Seluruh Indonesia</p>
+</div>
+</div>
+
+<div class="products">
+
+<div class="card portfolio-card">
+<div class="img-wrap" onclick="openModal('jpg1.jpeg', 'Hasil Cetak Yasin Hardcover 224 Halaman', 'Dokumentasi hasil cetak pesanan 150 eksemplar dengan cover emboss hitam emas, pita pembatas, dan sisipan foto almarhum/almarhumah.')">
+<img src="jpg1.jpeg" alt="Hasil Cetak Yasin Hardcover 224 Halaman">
+<span class="zoom-hint">🔍 Perbesar</span>
+</div>
+<div class="card-content">
+<div>
+<span class="badge">✓ Selesai Dikerjakan</span>
+<h3>Yasin Hardcover 224 Halaman</h3>
+<p>Cetakan huruf Arab & Latin tajam dengan kertas HVS/Art Paper berkualitas serta tambahan halaman foto keluarga dan doa.</p>
+</div>
+<div class="client-meta">Pesanan: 150 Eks • Tangerang Selatan</div>
+</div>
+</div>
+
+<div class="card portfolio-card">
+<div class="img-wrap" onclick="openModal('jpg2.jpeg', 'Hasil Cetak Yasin Hardcover Biru Royal', 'Dokumentasi hasil cetak pesanan 200 eksemplar dengan finishing poly emas mengkilap dan jilid lem panas + jahit benang yang kuat.')">
+<img src="jpg2.jpeg" alt="Hasil Cetak Yasin Hardcover Biru Royal">
+<span class="zoom-hint">🔍 Perbesar</span>
+</div>
+<div class="card-content">
+<div>
+<span class="badge">✓ Selesai Dikerjakan</span>
+<h3>Yasin Hardcover Poly Emas</h3>
+<p>Jilid kuat tidak mudah lepas, dilengkapi rumbai pembatas halaman dan sudut siku pengaman cover agar awet disimpan.</p>
+</div>
+<div class="client-meta">Pesanan: 200 Eks • Jakarta Selatan</div>
+</div>
+</div>
+
+<div class="card portfolio-card">
+<div class="img-wrap" onclick="openModal('jpg4.jpeg', 'Hasil Cetak Yasin & Majmu Syarif Custom', 'Dokumentasi pesanan khusus acara 40 hari dan 100 hari dengan desain sampul putih emas yang bersih dan elegan.')">
+<img src="jpg4.jpeg" alt="Hasil Cetak Yasin Custom Acara Tahlilan">
+<span class="zoom-hint">🔍 Perbesar</span>
+</div>
+<div class="card-content">
+<div>
+<span class="badge">✓ Selesai Dikerjakan</span>
+<h3>Yasin Custom Acara 40 & 100 Hari</h3>
+<p>Desain sisipan dan sampul dikonsultasikan hingga disetujui keluarga sebelum proses naik cetak massal.</p>
+</div>
+<div class="client-meta">Pesanan: 100 Eks • Depok & Jabodetabek</div>
+</div>
+</div>
+
+</div>
+
+<div style="text-align: center; margin-top: 25px;">
+<a class="btn" href="https://wa.me/62881023356554?text=Halo%20Arridwan%20Yasin,%20saya%20sudah%20lihat%20portofolio%20hasil%20cetaknya%20dan%20ingin%20konsultasi%20pesanan.">
+KONSULTASI PESANAN ANDA SEKARANG
+</a>
+</div>
+
+</div>
+</section>
+<!-- AKHIR BAGIAN PORTOFOLIO -->
+
 <div class="modal" id="previewModal" onclick="closeModalOnBackdrop(event)">
 <div class="modal-box">
 <button class="modal-close" onclick="closeModal()">✕</button>
@@ -854,7 +986,7 @@ function openModal(src, title, desc) {
     modalImg.src = src;
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
-    modalWaBtn.href = `https://wa.me/62881023356554?text=${encodeURIComponent('Halo Arridwan Yasin, saya ingin pesan Buku Yasin model ' + title + '.')}`;
+    modalWaBtn.href = `https://wa.me/62881023356554?text=${encodeURIComponent('Halo Arridwan Yasin, saya ingin pesan Buku Yasin seperti ' + title + '.')}`;
     modal.classList.add('open');
 }
 
